@@ -13,6 +13,7 @@ describe('Validação de campos obrigatórios no Login', () => {
     cy.contains('É campo obrigatório').should('be.visible');  // Valida mensagem de campo obrigatório
   });
 
+  // VALIDAÇAO PARA LOGIN COM USUARIO INVÁLIDO
 
   it('exibir critica com usuário inválido', () => {
    cy.get('.style__ContainerFormLogin-sc-1wbjw6k-0 > :nth-child(1) > .input__default').type("teste@ttt.com",{force: true}); // inserir email de login
@@ -27,7 +28,7 @@ describe('Validação de campos obrigatórios no Login', () => {
 //  TESTE DE CRITICA DE SENHAS DIFERENTES - FUNCIONALIDADE - CADASTRAMENTO
 
   it('Critica que as Senhas são diferentes', () => {
-<<<<<<< HEAD
+
     cy.get('.ihdmxA')  // Abrir tela de cadastro
     .click();
 
