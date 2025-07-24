@@ -33,7 +33,7 @@ describe('Validação de campos obrigatórios no Login', () => {
     cy.get('[name=email]') // Preencher campo Email
     .eq(1)
     .type("teste@tt.com",{force: true}); 
-=======
+
     cy.get('.ihdmxA')
     .click(); // Abrir tela de cadastro
 
@@ -41,8 +41,7 @@ describe('Validação de campos obrigatórios no Login', () => {
     cy.get('[name=email]')
     .eq(1)
     .type("teste@tt.com",{force: true}); // Preencher campo Email
->>>>>>> deea737 (refatorar testes de cadastro e validação de campos obrigatórios para melhorar a legibilidade e a estrutura)
-    
+   
     
     cy.get('[name=name]') // Preencher campo Nome
       .eq(0)
