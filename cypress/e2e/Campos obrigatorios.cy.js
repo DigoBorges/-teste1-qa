@@ -4,6 +4,8 @@ describe('Validação de campos obrigatórios no Login', () => {
     cy.visit('https://bugbank.netlify.app');
   });
 
+// VALIDAÇAO PARA CAMPOS OBRIGATORIOS LOGIN
+
   it('exibir critica de obrigatório ao tentar logar sem email e senha', () => {
    
     cy.get('form').should('be.visible'); // validar que formulário aparecendo   
@@ -12,17 +14,26 @@ describe('Validação de campos obrigatórios no Login', () => {
   });
 
 
+ // VALIDAÇAO PARA LOGIN COM USUARIO INVÁLIDO
+
   it('exibir critica com usuário inválido', () => {
-   cy.get('.style__ContainerFormLogin-sc-1wbjw6k-0 > :nth-child(1) > .input__default').type("teste@ttt.com",{force: true}); // inserir email de login
-    cy.get('.style__ContainerFormLogin-sc-1wbjw6k-0 > .login__password > .style__ContainerFieldInput-sc-s3e9ea-0 > .input__default').type("abcd1234",{force: true}); // inserir senha de login
-    cy.get('form').should('be.visible'); // validar que formulário aparecendo 
+
+   cy.get('[name=email]') // inserir email de login
+    .eq(0)
+    .type("testWe@tt.com",{force: true})
+
+
+    cy.get('[name=password]') // Preencher campo senha
+    .eq(0)
+    .type("1234",{force: true}); // inserir senha de login
+
     cy.get('.otUnI').click(); // clicar no botão Acessar
          
      cy.get('#modalText').should('be.visible').and('contain', 'Usuário ou senha inválido').and('contain', 'Tente novamente ou verifique suas informações');  // Valida mensagem de campo obrigatório
      cy.get('#btnCloseModal').click();
   });
 
-// Testes de Critica de Senha não Igual para Cadastramento
+//  TESTE DE CRITICA DE SENHAS DIFERENTES - FUNCIONALIDADE - CADASTRAMENTO
 
   it('Critica que as Senhas são diferentes', () => {
     cy.get('.ihdmxA')  // Abrir tela de cadastro

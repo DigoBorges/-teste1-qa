@@ -33,7 +33,7 @@ describe('Cadastro de usuário', () => {
     
     cy.get('[name=passwordConfirmation]')  // Preencher campo confirmar Senha
     .eq(0)
-    .type("teste@tt.com",{force: true});
+    .type("1234",{force: true});
     
     cy.get('#toggleAddBalance') // clique no botão de inserir Saldo
     .click({force: true}); 
