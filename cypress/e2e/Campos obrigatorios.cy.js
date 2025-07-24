@@ -4,6 +4,8 @@ describe('Validação de campos obrigatórios no Login', () => {
     cy.visit('https://bugbank.netlify.app');
   });
 
+// VALIDAÇAO PARA CAMPOS OBRIGATORIOS LOGIN
+  
   it('exibir critica de obrigatório ao tentar logar sem email e senha', () => {
    
     cy.get('form').should('be.visible'); // validar que formulário aparecendo   
@@ -22,7 +24,7 @@ describe('Validação de campos obrigatórios no Login', () => {
      cy.get('#btnCloseModal').click();
   });
 
-// Testes de Critica de Senha não Igual para Cadastramento
+//  TESTE DE CRITICA DE SENHAS DIFERENTES - FUNCIONALIDADE - CADASTRAMENTO
 
   it('Critica que as Senhas são diferentes', () => {
 <<<<<<< HEAD
