@@ -35,8 +35,8 @@ describe('Cadastro de usuário', () => {
     .eq(0)
     .type("teste@tt.com",{force: true});
     
-    cy.get('#toggleAddBalance')
-    .click({force: true}); // clique no botão de inserir Saldo
+    cy.get('#toggleAddBalance') // clique no botão de inserir Saldo
+    .click({force: true}); 
     
     cy.get('.styles__ContainerFormRegister-sc-7fhc7g-0 > .style__ContainerButton-sc-1wsixal-0')
     .click({force: true}); // clicar no botão cadastrar
