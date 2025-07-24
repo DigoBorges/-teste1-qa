@@ -16,7 +16,7 @@ describe('Cadastro com Login faker', () => {
   }
 
 
-// CADASTRO DE USUÁRIO COM DADOS FICTÍCIOS
+// CADASTRO DE USUÁRIO COM DADOS FICTÍCIOS//
 
   it('Realizar cadastro de um usuário com dados fictícios', () => {
     
