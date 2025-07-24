@@ -3,6 +3,7 @@
 // pois o Cypress limpa o armazenamento local entre os testes por padrão. 
 // Por isso, para garantir que o usuário cadastrado estará disponível para o login, ambos os fluxos são realizados juntos no mesmo teste.
 
+const { faker } = require('@faker-js/faker');
 
 describe('Cadastro de usuário', () => {
 
