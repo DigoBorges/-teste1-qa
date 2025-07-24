@@ -44,9 +44,21 @@ describe('Cadastro de usuário', () => {
     cy.get('#btnCloseModal')// fechar a modal
     .click(); 
    
-    // cy.get('.style__ContainerFormLogin-sc-1wbjw6k-0 > :nth-child(1) > .input__default').type("teste@tt.com",{force: true}); // inserir email de login
-    //cy.get('.style__ContainerFormLogin-sc-1wbjw6k-0 > .login__password > .style__ContainerFieldInput-sc-s3e9ea-0 > .input__default').type("abcd1234",{force: true}); // inserir senha de login
-   // cy.get('.otUnI').click(); // clicar no botão Acessar
+
+
+       // Realizando Login com os dados cadastrados
+
+
+    cy.get('[name=email]') // inserir email de login
+    .eq(0)
+    .type("teste@tt.com",{force: true})
+
+
+    cy.get('[name=password]') // Preencher campo senha
+    .eq(0)
+    .type("1234",{force: true}); // inserir senha de login
+
+    cy.get('.otUnI').click(); // clicar no botão Acessar
         
   });
 })  
