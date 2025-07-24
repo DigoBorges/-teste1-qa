@@ -14,13 +14,13 @@ describe('Cadastro de usuário', () => {
   });
 
  it('Cadastro de usuário com sucesso', () => {
-  cy.get('.ihdmxA')
-  .click(); // Abrir tela de cadastro
+  cy.get('.ihdmxA') // Abrir tela de cadastro
+  .click(); 
 
   
-    cy.get('[name=email]')
+    cy.get('[name=email]') // Preencher campo Email
     .eq(1)
-    .type("teste@tt.com",{force: true}); // Preencher campo Email
+    .type("teste@tt.com",{force: true}); 
     
     
     cy.get('[name=name]') // Preencher campo Nome
