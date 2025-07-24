@@ -5,7 +5,6 @@ describe('Validação de campos obrigatórios no Login', () => {
   });
 
 // VALIDAÇAO PARA CAMPOS OBRIGATORIOS LOGIN
-
   it('exibir critica de obrigatório ao tentar logar sem email e senha', () => {
    
     cy.get('form').should('be.visible'); // validar que formulário aparecendo   
@@ -67,7 +66,5 @@ describe('Validação de campos obrigatórios no Login', () => {
     .click(); 
   }); 
 
-
-  
 
 });
